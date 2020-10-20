@@ -7,9 +7,7 @@ def randomization(n):
     Returns:
       A - a randomly-generated nx1 Numpy array.
     """
-    #Your code here
-    raise NotImplementedError
-
+    return (np.random.rand(n,1))
 def operations(h, w):
     """
     Takes two inputs, h and w, and makes two Numpy arrays A and B of size
@@ -23,8 +21,10 @@ def operations(h, w):
       B - a randomly-generated h x w Numpy array.
       s - the sum of A and B.
     """
-    #Your code here
-    raise NotImplementedError
+    A=np.random.rand(h,w)
+    B=np.random.rand(h,w)
+    s=A+B
+    return A,B,s
 
 
 def norm(A, B):
@@ -38,8 +38,9 @@ def norm(A, B):
     Returns:
       s - the L2 norm of A+B.
     """
-    #Your code here
-    raise NotImplementedError
+    s=A+B
+    s=np.linalg.norm(s)
+    return s
 
 
 def neural_network(inputs, weights):
@@ -53,20 +54,20 @@ def neural_network(inputs, weights):
      Returns (in this order):
        out - a 1 x 1 NumPy array, representing the output of the neural network
     """
-    #Your code here
-    raise NotImplementedError
+    z=np.dot(weights.T,inputs)
+    return np.tanh(z)
 
 def scalar_function(x, y):
     """
     Returns the f(x,y) defined in the problem statement.
     """
-    #Your code here
-    raise NotImplementedError
+    if x <= y:
+        return x*y
+    else:
+        return x/y
 
 def vector_function(x, y):
     """
     Make sure vector_function can deal with vector input x,y 
     """
-    #Your code here
-    raise NotImplementedError
-
+    return (np.vectorize(scalar_function)(x,y))
