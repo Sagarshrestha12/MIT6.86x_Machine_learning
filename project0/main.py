@@ -71,3 +71,6 @@ def vector_function(x, y):
     Make sure vector_function can deal with vector input x,y 
     """
     return (np.vectorize(scalar_function)(x,y))
+filename=__file__
+import pdb;pdb.set_trace()
+print(f'path={filename}')
