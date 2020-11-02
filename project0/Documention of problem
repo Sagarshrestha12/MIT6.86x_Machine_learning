@@ -1,0 +1,17 @@
+Problem 1:
+When I first install conda using command line:
+    bash anoconda.sh file
+After installing it normally by just hitting enter key. By default installer doesn't install anoconda for me.
+Due this ,I activate conda using the code :
+--> source $HOME/anoconda2/bin/activate
+After that agian problem arises i.e when I open up new terminal,it shows erroe:
+-->conda :command not found 
+I resolve this problem, BY adding $HOME/anoconda2/bin to Path variable for all terminal so that I could run it from any 
+terminal. I write Path variable by appending 'export PATH="$HOME/anoconda2/bin:$PATH" to ~/.bashrc". To update variable i
+need to run ---source ~/.bashrc
+After that I couldn't open jupter-notebook as usual . I got stock .I resolve it by undoing what I have done. I found
+that, problem was due to addition to PATH variable.
+After the tone of reserch , I decide to uninstall conda by using the command below:
+-->rm -rf anoconda2
+That I remove whole entire folder anoconda.
+Then ,During installation yes 
